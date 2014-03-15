@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Kohlpad::Application.load_tasks
+ACPerformAPP::Application.load_tasks

@@ -24,4 +24,4 @@ def secure_token
   end
 end
 
-Kohlpad::Application.config.secret_key_base = secure_token
+ACPerformAPP::Application.config.secret_key_base = secure_token
