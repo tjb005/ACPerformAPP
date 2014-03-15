@@ -1,16 +1,8 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse max width">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "ACPerformAPP", root_path, id: "logo" %>
       <nav>
-        <form class="navbar-search pull-right">
-          <input type="text" class="search-query" placeholder="Search">
-        </form>
         <ul class="nav pull-left">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Galleries", root_path %></li>
-          <li><%= link_to "Tutorials", root_path %></li>
-          <li><%= link_to "Reviews", root_path %></li>
           <% if signed_in? %> 
           <li><%= link_to "Users", users_path %></li>
           <li id="fat-menu" class="dropdown">
