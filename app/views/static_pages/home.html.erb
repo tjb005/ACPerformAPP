@@ -17,16 +17,17 @@
   </div>
 </div>
 <% else %>
-
+<div class="row">
 <div class="container-fluid">
   <div class="menuone">
     <ul class="nav nav-tabs">
-      <li class="active menuone"><%= link_to "AAA", signin_path %></li>
-      <li class="menuone"><%= link_to "ENV", signin_path %></li>
-      <li class="menuone"><%= link_to "CFG", signin_path %></li>
-      <li class="menuone"><%= link_to "CDL/MEL", signin_path %></li>
-      <li class="menuone"><%= link_to "RES", signin_path %></li>
+      <li class="active"><%= link_to "APT", signin_path %></li>
+      <li><%= link_to "ENV", signin_path %></li>
+      <li><%= link_to "CFG", signin_path %></li>
+      <li><%= link_to "MEL", signin_path %></li>
+      <li><%= link_to "RES", signin_path %></li>
     </ul>
   </div>
+</div>
 </div>
 <% end %>

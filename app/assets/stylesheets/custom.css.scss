@@ -1,3 +1,5 @@
+$grid-float-breakpoint: 10px;
+
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -10,6 +12,16 @@ $blue: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+@media (max-width: 100px) { 
+   .no-float {
+       display:block;
+       float:none;
+       padding:0;
+   }
+}
+
+
 
 /* universal */
 
@@ -262,7 +274,16 @@ aside {
 
 .menuone{
   li{
-    font-size:5px;
-
+    font-size:1em;
+    margin-left: 0em;
+    margin-right:0em;
+    padding-left:0em;
+    padding-right:0em;
     }
+
+  }
+
+  #CDLMEL{
+    font-size:1em;
+    width:6.5em;
   }
