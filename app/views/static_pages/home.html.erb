@@ -17,88 +17,119 @@
   </div>
 </div>
 <% else %>
-<div class="container-fluid">
-<div class="row">
-  <div class="menuone">
-    <ul class="nav nav-tabs">
-      <li class="active"><%= link_to "APT", signin_path %></li>
-      <li><%= link_to "ENV", signin_path %></li>
-      <li><%= link_to "CFG", signin_path %></li>
-      <li><%= link_to "MEL", signin_path %></li>
-      <li><%= link_to "RES", signin_path %></li>
-    </ul>
-  </div>
-</div>
-</div>
 
+    
+    </body>
+    <!-- menu -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        
+        <!-- **a button to click on when the menu list is hidden
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+        </button>
+        -->
+        
+        <div class="collapse navbar-collapse navHeaderCollapse show">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active"><%= link_to "APT", apt_path %></li>
+            <li><%= link_to "ENV", env_path %></li>
+            <li><%= link_to "CFG", cfg_path %></li>
+            <li><%= link_to "CDLMEL", cdlmel_path %></li>
+            <li><%= link_to "RES", res_path %></li>              
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- info/form -->
+    <div class="container">
+      
+      <form class="form-horizontal" role="form">
+      
+        <div class="form-group">
+          <label for="aircraft-number" class="col-xs-3 col-sm-2 control-label">AIRCRAFT</label>
+          <div class="col-xs-9 col-sm-6">
+            <input type="text" class="form-control" id="aircraft-number" placeholder="Type in Aircraft">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="flight-number" class="sr-only">FLIGHT NUMBER</label>
+          <div class="col-xs-9 col-sm-6 col-xs-offset-3 col-sm-offset-2">
+            <input type="text" class="form-control" id="flight-number" placeholder="Type in Flight Number">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="airport" class="col-xs-3 col-sm-2 control-label">AIRPORT</label>
+          <div class="col-xs-9 col-sm-6">
+            <input type="text" class="form-control" id="airport" placeholder="Type in Airport">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="runway" class="col-xs-3 col-sm-2 control-label">RUNWAY</label>
+          <div class="col-xs-9 col-sm-6">
+            <input type="text" class="form-control" id="runway" placeholder="Type in runway">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="taxiway" class="col-xs-3 col-sm-2 control-label">TAXIWAY</label>
+          <div class="col-xs-9 col-sm-6 styled-select">
+            <select class="form-control" id="taxiway" placeholder="Click here for taxiway">
+              <option>Click here to select taxiway</option>
+              <option>Taxiway 1</option>
+              <option>Taxiway 2</option>
+              <option>Taxiway 3</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="special" class="col-xs-3 col-sm-2 control-label">SPECIAL</label>
+          <div class="col-xs-9 col-sm-6 styled-select">
+            <select class="form-control" id="special" placeholder="Click here for special conditions">
+              <option>Click here for special conditions</option>
+              <option>Special condition 1</option>
+              <option>Special condition 2</option>
+              <option>Special condition 3</option>
+            </select>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+    
+    <!-- extra info -->
+    <div class="container" id="extra-info">
+      <p>
+        <small>
+          Aukland International Airport<br />
+          TORA 2500m<br />
+          TODA 2560m<br />
+          ASDA 2560m<br />
+        </small>
+      </p>
+    </div>
+    
+    <!--footer-->
+    <div class= "navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+      
+        <a href="#" class="btn navbar-btn btn-clear pull-right">CLEAR</a>
+        <a href="#" class="btn navbar-btn btn-default pull-right">INFO</a>
+        
+      </div>
+    </div>
 
-<table class="table">
-<tr>
-<td class="row_1">Aircraft</td>
-<td class="row_1" style="font-size:0.75em">Q300</td>
-<td class="row_2">ZK-NED</td>
-</tr>
-
-<tr>
-<td class="row_1">Airport</td>
-<td class="row_1"></td>
-<td class="row_2">AKL/NZAA</td>
-</tr>
-
-<tr>
-<td class="row_1">Runway</td>
-<td class="row_1"></td>
-<td class="row_2">05R</td>
-</tr>
-
-<tr>
-<td class="row_1">Taxiway</td>
-<td class="row_1"></td>
-<td class="row_2">A10</td>
-</tr>
-
-<tr>
-<td class="row_1">Special</td>
-<td class="row_1"></td>
-<td class="row_2">nil</td>
-</tr>
-
-</table>
-
-<table class="table">
-<tr> Auckland international Airport </tr>
-</table>
-
-<div class="row"> 
-<div class="col-xs-6">
-
-<table class="table">
-<tr>
-<td>TORA</td>
-<td>2500m</td>
-</tr>
-
-<tr>
-<td>TODA</td>
-<td>2560m</td>
-</tr>
-
-<tr>
-<td>ASDA</td>
-<td>2560m</td>
-</tr>
-
-</table>
-</div>
-
-<div class="col-xs-6">
-<button type="button" class="btn btn-default navbar-btn pull-right">INFO</button>
-<button type="button" class="btn btn-default navbar-btn pull-right">CLEAR</button>
-</div>
-
-
-
-</div>
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
 
 <% end %>
