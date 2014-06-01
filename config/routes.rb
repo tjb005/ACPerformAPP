@@ -7,14 +7,14 @@ resources :users do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  root  'static_pages#home'
+  root  'static_pages#apt'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/apt',     to: 'static_pages#home',     via: 'get'
+  match '/apt',     to: 'static_pages#apt',     via: 'get'
   match '/env',     to: 'static_pages#env',     via: 'get'
   match '/cfg',     to: 'static_pages#cfg',     via: 'get'
   match '/cdlmel',  to: 'static_pages#cdlmel',  via: 'get'
