@@ -1,24 +1,3 @@
-<% if signed_in? %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <%= render 'shared/user_info' %>
-    </section>
-    <section>
-      <%= render 'shared/stats' %>
-    </section>
-    <section>
-      <%= render 'shared/micropost_form' %>
-    </section>
-  </aside>
-  <div class="span8">
-    <h3>Micropost Feed</h3>
-    <%= render 'shared/feed' %>
-  </div>
-</div>
-<% else %>
-
-    
     <body>
    <!-- menu -->
     <div class="navbar navbar-inverse navbar-static-top">
@@ -120,7 +99,10 @@
     <!--footer-->
     <div class= "navbar navbar-default">
       <div class="container">
+
+        <%= link_to "SIGN OUT", signout_path, method:"delete", class:"btn navbar-btn btn-signout pull-right" %>
       
+     <!--    <a href="#" class="btn navbar-btn btn-signout pull-right">SIGN OUT</a> -->
         <a href="#" class="btn navbar-btn btn-clear pull-right">CLEAR</a>
         <a href="#" class="btn navbar-btn btn-default pull-right">INFO</a>
         
@@ -131,4 +113,3 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
   </body>
-<% end %>

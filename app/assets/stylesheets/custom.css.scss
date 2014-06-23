@@ -9,6 +9,16 @@ body {
 
 /*! classes */
 
+.container-signin {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top:25px;
+  padding-bottom:35px;
+  background-color:#FFFFFF;
+}
+
 /*! link spacing changes */
 .nav > li > a {
   position: relative;
@@ -109,6 +119,14 @@ body {
   font-size:12px;
 }
 
+.control-label {
+  font-size:12px;
+}
+
+.form {
+  font-size:12px;
+}
+
 @media (min-width: 768px) {
   
   .form-horizontal .control-label {
@@ -173,6 +191,21 @@ body {
   color: #333;
   background-color: #3CB878;
   border-color: #1ea161;
+}
+
+.btn-signout {
+  background-color:#303030;
+  color:#FFFFFF;
+}
+
+.btn-signout:hover,
+.btn-signout:focus,
+.btn-signout:active,
+.btn-signout.active,
+.open .dropdown-toggle.btn-signout {
+  color: #333;
+  background-color: #d03737;
+  border-color: #a31a1a;
 }
 
 /*! calculator button changes */
